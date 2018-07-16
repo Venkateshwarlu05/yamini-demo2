@@ -1,0 +1,7 @@
+System.out.println("employee number =" + empnumber);
+	System.out.println("employee name = " + empname);
+	DateFormat dateFormat = new SimpleDateFormat("2016/04/20 ");
+	Date date = new Date();
+	System.out.println(dateFormat.format(date));
+	//System.out.println("employee joining date = " + joiningdate);
+	System.out.println("employee salary =" + Salary);

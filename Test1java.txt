@@ -1,0 +1,124 @@
+package Collage.cse.Employee;
+
+
+
+import java.util.Date;
+
+
+public class Employee {
+	private int empnumber;
+	private String empname;
+	private Date joiningdate;
+	 
+	private double Salary;
+	
+	public Employee(int empNumber, String empName, Date joiningDate, double salary) {
+		
+		this.empnumber = empNumber;
+		this.empname = empName;
+		
+		this.joiningdate = joiningDate;
+		
+		this.Salary = salary;
+	}
+	
+	
+ 
+ public int getEmpnumber() {
+	return empnumber;
+	
+}
+ public void setEmpnumber(int empnumber) {
+	this.empnumber = empnumber;
+}
+ public String getEmpname() {
+	return empname;
+}
+ public void setEmpname(String empname) {
+	this.empname = empname;
+}
+ public Date getJoiningdate() {
+	return joiningdate;
+}
+ public void setJoiningdate(Date joiningdate) {
+	this.joiningdate = joiningdate;
+ }
+	
+ public double getSalary() {
+	return Salary;
+}
+ public void setSalary(double salary) {
+	Salary = salary;
+}
+public String empdetails(){
+	
+	return "Employee Number: "+ empnumber+"\nEmployee Name: "+ empname+"\nJoining Date: "+ joiningdate+"\nSalary:"+Salary;
+	
+}
+}
+
+package Collage.dep.EmployeeDriver;
+import java.util.Date;
+
+import Collage.cse.Employee.Employee;
+
+public class Employeedriver {
+				
+
+public static void main (String[] args) {
+	Date hiredate = new Date();
+	System.out.println(hiredate.toString());
+	
+		Employee Shashi = new Employee(1,"Shashi",hiredate,60000);
+	System.out.println(Shashi.empdetails());
+	
+	Employee Ketan = new Employee(2,"Ketan",hiredate, 50000);
+	System.out.println("\n"+Ketan.empdetails());
+	
+	Employee Tarun = new Employee(3,"Bharath",hiredate,45000);
+	System.out.println("\n"+Tarun.empdetails());
+}
+} 
+
+output
+
+Employee Number: 1
+Employee Name: Shashi
+Joining Date: Mon Jan 15 00:00:23 CST 2018
+Salary:60000.0
+
+Employee Number: 2
+Employee Name: Ketan
+Joining Date: Mon Jan 15 00:00:23 CST 2018
+Salary:50000.0
+
+Employee Number: 3
+Employee Name: Bharath
+Joining Date: Mon Jan 15 00:00:23 CST 2018
+Salary:45000.0
+
+II.	Collect information about final and super keyword in java.
+
+Final keyword 
+In the Java programming language, the final keyword is used in several different contexts to define an entity that can only be assigned once.
+Once a final variable has been assigned, it always contains the same value. If a final variable holds a reference to an object, then the state of the object may be changed by operations on the object, but the variable will always refer to the same object. This applies also to arrays, because arrays are objects; if a final variable holds a reference to an array, then the components of the array may be changed by operations on the array, but the variable will always refer to the same array.
+1. java final variable – If you make any variable as final, you cannot change the value of final variable (It will be constant).
+2. java final method -  If you make any method as final, you cannot override it.
+3. java final class -   If you make any class as final, you cannot extend it.
+ 
+Super keyword – 
+The super keyword in java is a reference variable which is used to refer immediate parent class object.
+
+Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable.
+
+Usage of java super Keyword
+1. super can be used to refer immediate parent class instance variable.
+2. super can be used to invoke immediate parent class method.
+3. super () can be used to invoke immediate parent class constructor.
+
+
+ 
+
+
+
+
